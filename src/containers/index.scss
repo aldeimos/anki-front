@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../assets/fonts/SFProText-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../assets/fonts/SFProText-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../assets/fonts/SFProDisplay-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../assets/fonts/TTCommons-DemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../assets/fonts/TTCommons-DemiBold.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  --blue: royalblue;
+  --grey: gainsboro;
+}
+
+.container {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.PanelHeaderButton {
+  color: red;
+}
+
+.PanelHeader__in {
+  align-items: baseline !important;
+}

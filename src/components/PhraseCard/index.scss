@@ -1,0 +1,26 @@
+.phrase-card {
+  display: flex;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 40px);
+    padding: 10px;
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'SF Pro Text', Helvetica, sans-serif;
+    text-align: center;
+
+    background-color: rgba(65, 105, 225, 0.3);
+    border-radius: 4px;
+
+  }
+
+  .Icon {
+    margin-left: 12px;
+  }
+
+}

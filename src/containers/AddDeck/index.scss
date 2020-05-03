@@ -1,0 +1,52 @@
+#add-deck {
+
+  .Panel__in {
+    padding-bottom: 76px;
+  }
+
+  .Checkbox {
+    &__content {
+      font-family: 'SF Pro Text', Helvetica, sans-serif;
+      letter-spacing: -0.08px;
+    }
+  }
+
+  .add-deck__btn {
+    margin: 0 12px;
+
+    .Button {
+      background-color: var(--blue);
+
+      &__content {
+        font-family: 'SF Pro Text', Helvetica, sans-serif;
+        letter-spacing: -0.08px;
+      }
+    }
+  }
+
+  .custom-button {
+    margin: 10px 12px 0 12px;
+  }
+
+  .phrase-card {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .FixedLayout {
+    padding-top: 20px;
+
+    box-shadow: 0 -0.5px 0 0 rgba(0, 0, 0, 0.12);
+    background-color: rgba(255, 255, 255, 0.92);
+  }
+}
+
+.add-deck__title {
+  margin-bottom: 8px;
+
+  font-family: 'SF Pro Display', Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}

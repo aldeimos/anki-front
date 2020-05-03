@@ -1,0 +1,28 @@
+.home {
+
+  &__title {
+    margin-bottom: 10px;
+    padding-left: 16px;
+
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'SF Pro Display', Helvetica, sans-serif;
+
+    &--sub {
+      padding-left: 0;
+    }
+  }
+
+  &__my-decks {
+
+    .Card {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .deck {
+      min-width: 100%;
+    }
+  }
+}

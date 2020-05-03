@@ -1,0 +1,25 @@
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+
+  font-family: 'SF Pro Display', Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--blue);
+
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+
+  .Icon {
+    margin-right: 12px;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

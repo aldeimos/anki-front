@@ -1,0 +1,76 @@
+#welcome {
+  --primary: #555BFF;
+  --secondary: #22D2A0;
+  --background: #232323;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+
+  .Panel__in {
+    background-image: linear-gradient(180deg,#4a7ed0 0,#4a6fb8 100%);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .FixedLayout {
+    left: 50%;
+    bottom: var(--safe-area-inset-bottom);
+
+    transform: translateX(-50%);
+  }
+}
+
+.welcome {
+
+  &__logo {
+    width: 100px;
+    margin: 0 15px 40px 0;
+    padding: 15px;
+
+    cursor: pointer;
+    font-family: 'SF Pro Display', Helvetica, sans-serif;
+    font-size: 22px;
+    letter-spacing: -.8px;
+    color: #fff;
+    text-align: center;
+
+    border: 3px solid var(--primary);
+    box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+    20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+    30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+    40px -40px 0 -3px var(--background), 40px -40px var(--red);
+    transition: box-shadow 1s, top 1s, left 1s;
+    background-color: #232323;
+    animation: 3s bounce infinite alternate;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-family: 'SF Pro Text', Helvetica, sans-serif;
+    font-weight: 500;
+
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--grey);
+    text-align: center;
+  }
+}
+
+/*@keyframes bounce {
+  from {
+    box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green),
+    0 0 0 -3px var(--background), 0 0 0 0  var(--yellow),
+    0 0 0 -3px var(--background), 0 0 0 0  var(--orange),
+    0 0 0 -3px  var(--background), 0 0 0 0  var(--red);
+  }
+
+  to {
+    top: -20px;
+    left: 20px;
+  }
+}*/
