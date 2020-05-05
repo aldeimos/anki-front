@@ -1,23 +1,27 @@
 import React from 'react';
 import {Group, Panel, PanelHeader} from '@vkontakte/vkui';
 import Favorites from '../../components/Favorites';
-import Deck from '../../components/Deck';
+import Deck from '../../components/Deck'
+import CustomButton from '../../components/CustomButton';
+import { store } from '@mini-core/core';
 
 import './index.scss';
 import Icon28AddSquareOutline from '@vkontakte/icons/dist/28/add_square_outline';
-import CustomButton from "../../components/CustomButton";
 
 
 const Home = ({id, router}) => {
+    const [decks, decksActions] = store.useModel('decks');
     return (
         <Panel id={id}>
             <PanelHeader>
                 Список колод
             </PanelHeader>
             <Group>
-                <div className="home__title">
-                    Избранное
-                </div>
+                {decks.decks.filter(deck => deck.isFavorite).length !== 0 &&
+                    <div className="home__title">
+                        Избранное
+                    </div>
+                }
                 <Favorites/>
             </Group>
             <div className="container">
@@ -32,10 +36,11 @@ const Home = ({id, router}) => {
                             Мои колоды
                         </div>
                         <Group>
-                            <Deck progress={50} isFavorite={false} title={'Заголовок'} words={[1,2,3]}/>
-                            <Deck progress={50} isFavorite={false} title={'Заголовок'} words={[1,2,3]}/>
-                            <Deck progress={50} isFavorite={false} title={'Заголовок'} words={[1,2,3]}/>
-                            <Deck progress={50} isFavorite={false} title={'Заголовок'} words={[1,2,3]}/>
+                            {decks.decks.length !== 0 ?
+                                decks.decks.filter(deck => deck.isFavorite === false)
+                                    .map(deck => <Deck {...deck}/>) :
+                                'Список колод пуст'
+                            }
                         </Group>
                     </div>
                 </div>

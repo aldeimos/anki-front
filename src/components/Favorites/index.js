@@ -1,17 +1,20 @@
 import React from 'react';
+import {CardScroll} from '@vkontakte/vkui';
+import Deck from '../Deck';
+import { store } from '@mini-core/core'
 
 import './index.scss'
-import {CardScroll} from "@vkontakte/vkui";
-import Deck from "../Deck";
 
 const Favorites = () => {
+    const [ decks, decksAction ] = store.useModel('decks');
     return (
         <div className="favorites">
             <CardScroll>
-                <Deck progress={50} isFavorite={false} title={'Моя колода'} words={[1, 2, 3]}/>
-                <Deck progress={50} isFavorite={false} title={'Моя колода'} words={[1, 2, 3]}/>
-                <Deck progress={50} isFavorite={false} title={'Моя колода'} words={[1, 2, 3]}/>
-                <Deck progress={50} isFavorite={false} title={'Моя колода'} words={[1, 2, 3]}/>
+                {decks.decks.length !== 0 ?
+                    decks.decks.filter(deck => deck.isFavorite)
+                        .map(deck => <Deck {...deck}/>) :
+                    null
+                }
             </CardScroll>
         </div>
     )

@@ -17,13 +17,13 @@ import Icon28AddSquareOutline from '@vkontakte/icons/dist/28/add_square_outline'
 import CustomButton from "../../components/CustomButton";
 import PhraseCard from "../../components/PhraseCard";
 
-const AddDeck = ({id}) => {
+const AddDeck = ({id, router}) => {
     const [showPopup, setShowPopup] = useState(false);
     return (
         <Panel id={id}>
             <PanelHeader
                 left={
-                    <PanelHeaderBack/>
+                    <PanelHeaderBack onClick={() => router.goBack()}/>
                 }
             >
                 Создание колоды
@@ -43,18 +43,7 @@ const AddDeck = ({id}) => {
                 <div className="add-deck__title">
                     Карточки в колоде
                 </div>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
-                <PhraseCard text="привет / hello"/>
+                <PhraseCard content={{phrase_1: 'привет', phrase_2: 'hello'}}/>
             </Div>
             <FixedLayout vertical="bottom">
                 <div className="add-deck__btn">

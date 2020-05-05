@@ -8,6 +8,8 @@ import { utils } from '@mini-core/core';
 
 import App from './containers';
 import '@vkontakte/vkui/dist/vkui.css';
+import './store/decks';
+import './store/user';
 
 window.vk_settings = utils.parseParams(window.location.search);
 bridge.subscribe(utils.schemeChanger);
