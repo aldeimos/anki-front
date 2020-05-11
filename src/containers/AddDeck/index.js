@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { store } from '@mini-core/core';
 import PropTypes from 'prop-types';
 import {
     Panel,
@@ -11,14 +12,33 @@ import {
     Div
 } from '@vkontakte/vkui';
 import AddCard from '../../components/AddCard';
+import CustomButton from '../../components/CustomButton';
+import PhraseCard from '../../components/PhraseCard';
 
 import './index.scss';
 import Icon28AddSquareOutline from '@vkontakte/icons/dist/28/add_square_outline';
-import CustomButton from "../../components/CustomButton";
-import PhraseCard from "../../components/PhraseCard";
+import {useDispatch, useSelector} from "react-redux";
+import { addDeck } from "../../store/decks/actionsCreators";
 
 const AddDeck = ({id, router}) => {
+    const dispatch = useDispatch();
+    const [newDeck, setNewDeck] = useState(
+        {
+            title: '',
+            isFavorite: false,
+            cards: [],
+        }
+    );
     const [showPopup, setShowPopup] = useState(false);
+
+    const setStateField = (value, field) => {
+        setNewDeck(prev => ({
+            ...prev,
+            [field]: value
+        }));
+    };
+
+
     return (
         <Panel id={id}>
             <PanelHeader
@@ -30,8 +50,18 @@ const AddDeck = ({id, router}) => {
             </PanelHeader>
             <FormLayout>
                 <FormLayoutGroup top="Название колоды">
-                    <Input type="text" default="Работа"/>
-                    <Checkbox>Добавить колоду в Избранные</Checkbox>
+                    <Input
+                        type="text"
+                        default="Работа"
+                        value={newDeck.title}
+                        onChange={(e) => setStateField(e.target.value, 'title')}
+                    />
+                    <Checkbox
+                        value={newDeck.isFavorite}
+                        onChange={(e) => setStateField(e.target.checked, 'isFavorite')}
+                    >
+                        Добавить колоду в Избранные
+                    </Checkbox>
                     <CustomButton
                         text="Добавить карточку"
                         icon={<Icon28AddSquareOutline fill="royalblue"/>}
@@ -43,7 +73,14 @@ const AddDeck = ({id, router}) => {
                 <div className="add-deck__title">
                     Карточки в колоде
                 </div>
-                <PhraseCard content={{phrase_1: 'привет', phrase_2: 'hello'}}/>
+                {newDeck.cards.length !== 0 ?
+                    newDeck.cards.map((card) =>
+                        <PhraseCard
+                            key={card.id}
+                            {...card}
+                    />) :
+                    'Ваша колода пуста'
+                }
             </Div>
             <FixedLayout vertical="bottom">
                 <div className="add-deck__btn">
@@ -55,7 +92,11 @@ const AddDeck = ({id, router}) => {
                     </Button>
                 </div>
             </FixedLayout>
-            {showPopup && <AddCard setShowPopup={setShowPopup}/>}
+            {showPopup && <AddCard
+                setShowPopup={setShowPopup}
+                addCard={setNewDeck}
+            />
+            }
         </Panel>
     )
 };

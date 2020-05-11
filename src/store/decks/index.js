@@ -1,38 +1,36 @@
-import { store } from '@mini-core/core';
+import * as types from './actions';
 
 const initialState = {
     decks: [],
-};
 
-const actions = {
-    load: (decks) => {
-        return {
-            decks
-        }
+    newDeck: {
+        title: 'хуй',
+        isFavorite: false,
+        cards: []
     }
 };
 
-const reducer = (state = initialState, action) => {
+const decks = (state = initialState, action) => {
     switch (action.type) {
-        case 'load': {
+        case types.LOAD_DECKS: {
             const { decks } = action;
             return {
                 ...state,
                 decks
             }
         }
-        case 'add': {
+        case types.ADD_DECK: {
             const { newDeck } = action;
+            state.decks = [...state.decks, newDeck];
             return {
                 ...state,
-                decks: [...state.decks, newDeck],
             }
         }
         default: return state;
     }
 };
 
-store.registerModel('decks', null, initialState, actions, reducer);
+export default decks;
 
 
 

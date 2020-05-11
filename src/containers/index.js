@@ -9,7 +9,7 @@ import './index.scss';
 const App = () => {
     return (
         <router.Router initialPage="main">
-            <router.Page id="main" initialPanel="welcome">
+            <router.Page id="main" initialPanel="add-deck">
                 <Welcome id="welcome" />
                 <Home id="home" />
                 <AddDeck id="add-deck"/>

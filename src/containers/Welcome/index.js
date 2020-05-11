@@ -15,7 +15,6 @@ const Welcome = ({id, router}) => {
         API.getProfile().then(profile => userActions.load(profile));
     }, []);
 
-    console.log(user);
     return (
         <Panel id={id} centered>
             <div className="welcome">

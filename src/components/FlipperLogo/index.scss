@@ -40,7 +40,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #232323;
+  background-color: var(--background);
 }
 
 .front {
@@ -48,12 +48,12 @@
   transform: rotateY(0deg);
   left: 0;
 
-  border: 3px solid var(--blue);
+  border: 3px solid var(--border);
 }
 
 .back {
   transform: rotateY(-180deg);
   left: -120px;
 
-  border: 3px solid darkviolet;
+  border: 3px solid var(--border);
 }
