@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {Group, Panel, PanelHeader} from '@vkontakte/vkui';
 import Favorites from '../../components/Favorites';
 import Deck from '../../components/Deck'
@@ -10,14 +11,15 @@ import Icon28AddSquareOutline from '@vkontakte/icons/dist/28/add_square_outline'
 
 
 const Home = ({id, router}) => {
-    const [decks, decksActions] = store.useModel('decks');
+    const decks = useSelector(store => store.decks.decks);
+    console.log(decks);
     return (
         <Panel id={id}>
             <PanelHeader>
                 Список колод
             </PanelHeader>
             <Group>
-                {decks.decks.filter(deck => deck.isFavorite).length !== 0 &&
+                {decks.filter(deck => deck.isFavorite).length !== 0 &&
                     <div className="home__title">
                         Избранное
                     </div>
@@ -36,8 +38,8 @@ const Home = ({id, router}) => {
                             Мои колоды
                         </div>
                         <Group>
-                            {decks.decks.length !== 0 ?
-                                decks.decks.filter(deck => deck.isFavorite === false)
+                            {decks.length !== 0 ?
+                                decks.filter(deck => deck.isFavorite === false)
                                     .map(deck => <Deck {...deck}/>) :
                                 'Список колод пуст'
                             }

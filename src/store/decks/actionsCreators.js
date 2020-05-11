@@ -20,3 +20,10 @@ export const addCard = (card) => {
         card
     }
 };
+
+export const deleteCard = (card) => {
+    return {
+        type: types.DELETE_CARD,
+        card
+    }
+};

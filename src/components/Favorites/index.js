@@ -4,14 +4,16 @@ import Deck from '../Deck';
 import { store } from '@mini-core/core'
 
 import './index.scss'
+import {useSelector} from "react-redux";
 
 const Favorites = () => {
-    const [ decks, decksAction ] = store.useModel('decks');
+    const decks = useSelector(store => store.decks.decks);
+
     return (
         <div className="favorites">
             <CardScroll>
-                {decks.decks.length !== 0 ?
-                    decks.decks.filter(deck => deck.isFavorite)
+                {decks.length !== 0 ?
+                    decks.filter(deck => deck.isFavorite)
                         .map(deck => <Deck {...deck}/>) :
                     null
                 }

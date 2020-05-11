@@ -8,13 +8,15 @@ import './index.scss';
 
 const AddCard = ({setShowPopup, addCard}) => {
     const [isRepeat, setIsRepeat] = useState(false);
+
     const [card, setCard] = useState({
-        id: null,
+        id: nanoid(),
         phrase_1: '',
         phrase_2: ''
     });
 
     const setStateField = (value, field) => {
+
         setCard((prev) => ({
             ...prev,
             [field]: value
@@ -22,13 +24,10 @@ const AddCard = ({setShowPopup, addCard}) => {
     };
 
     const clearState = () => {
-        setCard({id: null, phrase_1: '', phrase_2: ''})
+        setCard({id: nanoid(), phrase_1: '', phrase_2: ''})
     };
 
     const onAddButtonClickHandler = () => {
-        const generateCardId = nanoid();
-        setCard(prev => prev.id = generateCardId);
-
         addCard((prev) => ({
             ...prev,
             cards: [...prev.cards, card]
@@ -37,6 +36,10 @@ const AddCard = ({setShowPopup, addCard}) => {
         console.log(card);
         setShowPopup(isRepeat);
         clearState();
+    };
+
+    const validateAddCard = () => {
+        return card.phrase_1.trim().length === 0 || card.phrase_2.trim().length === 0
     };
 
     return (
@@ -77,6 +80,7 @@ const AddCard = ({setShowPopup, addCard}) => {
                             stretched
                             size="xl"
                             onClick={onAddButtonClickHandler}
+                            disabled={validateAddCard()}
                         >
                             Добавить
                         </Button>

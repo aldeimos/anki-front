@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { store } from '@mini-core/core';
+import { useDispatch } from 'react-redux';
+import { addDeck } from '../../store/decks/actionsCreators';
 import PropTypes from 'prop-types';
 import {
     Panel,
@@ -17,8 +18,8 @@ import PhraseCard from '../../components/PhraseCard';
 
 import './index.scss';
 import Icon28AddSquareOutline from '@vkontakte/icons/dist/28/add_square_outline';
-import {useDispatch, useSelector} from "react-redux";
-import { addDeck } from "../../store/decks/actionsCreators";
+
+
 
 const AddDeck = ({id, router}) => {
     const dispatch = useDispatch();
@@ -38,12 +39,32 @@ const AddDeck = ({id, router}) => {
         }));
     };
 
+    const clearState = () => {
+        setNewDeck(() => ({
+            title: '',
+            isFavorite: false,
+            cards: []
+        }))
+    };
+
+    const onAddDeckClickHandler = () => {
+        dispatch(addDeck(newDeck));
+        clearState();
+        router.openPanel('home');
+    };
+
+    const validateAddButton = () => {
+        return newDeck.title.trim().length === 0 || newDeck.cards.length === 0;
+    };
+
 
     return (
         <Panel id={id}>
             <PanelHeader
                 left={
-                    <PanelHeaderBack onClick={() => router.goBack()}/>
+                    <PanelHeaderBack
+                        onClick={() => router.goBack()}
+                    />
                 }
             >
                 Создание колоды
@@ -77,6 +98,7 @@ const AddDeck = ({id, router}) => {
                     newDeck.cards.map((card) =>
                         <PhraseCard
                             key={card.id}
+                            deleteCard={setNewDeck}
                             {...card}
                     />) :
                     'Ваша колода пуста'
@@ -87,6 +109,8 @@ const AddDeck = ({id, router}) => {
                     <Button
                         stretched
                         size="xl"
+                        onClick={onAddDeckClickHandler}
+                        disabled={validateAddButton()}
                     >
                         Создать колоду
                     </Button>
