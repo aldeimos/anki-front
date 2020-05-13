@@ -2,6 +2,7 @@
   "name": "anki",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aldeimos.github.io/{имя репозитория}/",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build",
@@ -27,12 +28,14 @@
     "@vkontakte/vkui": "3.8.2",
     "core-js": "3.6.5",
     "cross-env": "7.0.2",
+    "gh-pages": "^2.2.0",
+    "nanoid": "^3.1.6",
     "node-sass": "4.14.0",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hot-loader": "4.12.21",
-    "react-redux": "7.2.0",
+    "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
     "redux": "4.0.5"
   }
