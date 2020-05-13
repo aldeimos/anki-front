@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e0e76fa3dcd7153c62eff4eb5b527984",
+    "revision": "ba5f5ee7ac43b5714a2f93a17714cbbd",
     "url": "/anki-front/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/anki-front/static/css/2.551d3f2e.chunk.css"
   },
   {
-    "revision": "235e89987893ad64b213",
-    "url": "/anki-front/static/css/main.49340ed7.chunk.css"
+    "revision": "95f30d0d55db21b0c0ff",
+    "url": "/anki-front/static/css/main.2f997d83.chunk.css"
   },
   {
     "revision": "2ce5db62fbe9c4dd22de",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/anki-front/static/js/2.2267b390.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "235e89987893ad64b213",
+    "revision": "95f30d0d55db21b0c0ff",
     "url": "/anki-front/static/js/main.b1baa840.chunk.js"
   },
   {

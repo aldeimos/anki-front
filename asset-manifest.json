@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/anki-front/static/css/main.49340ed7.chunk.css",
+    "main.css": "/anki-front/static/css/main.2f997d83.chunk.css",
     "main.js": "/anki-front/static/js/main.b1baa840.chunk.js",
     "main.js.map": "/anki-front/static/js/main.b1baa840.chunk.js.map",
     "runtime-main.js": "/anki-front/static/js/runtime-main.7ca0621f.js",
@@ -9,10 +9,10 @@
     "static/js/2.2267b390.chunk.js": "/anki-front/static/js/2.2267b390.chunk.js",
     "static/js/2.2267b390.chunk.js.map": "/anki-front/static/js/2.2267b390.chunk.js.map",
     "index.html": "/anki-front/index.html",
-    "precache-manifest.9a5091d35e6c3543ae055207d6e17cab.js": "/anki-front/precache-manifest.9a5091d35e6c3543ae055207d6e17cab.js",
+    "precache-manifest.b28874d98e172dbe8ad2e79fd141cf56.js": "/anki-front/precache-manifest.b28874d98e172dbe8ad2e79fd141cf56.js",
     "service-worker.js": "/anki-front/service-worker.js",
     "static/css/2.551d3f2e.chunk.css.map": "/anki-front/static/css/2.551d3f2e.chunk.css.map",
-    "static/css/main.49340ed7.chunk.css.map": "/anki-front/static/css/main.49340ed7.chunk.css.map",
+    "static/css/main.2f997d83.chunk.css.map": "/anki-front/static/css/main.2f997d83.chunk.css.map",
     "static/js/2.2267b390.chunk.js.LICENSE.txt": "/anki-front/static/js/2.2267b390.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/anki-front/static/media/TTCommons-DemiBold.35313ea7.ttf"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.7ca0621f.js",
     "static/css/2.551d3f2e.chunk.css",
     "static/js/2.2267b390.chunk.js",
-    "static/css/main.49340ed7.chunk.css",
+    "static/css/main.2f997d83.chunk.css",
     "static/js/main.b1baa840.chunk.js"
   ]
 }
