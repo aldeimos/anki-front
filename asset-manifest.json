@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/vk-freshcode/static/css/main.7883ad8d.chunk.css",
-    "main.js": "/vk-freshcode/static/js/main.240a6547.chunk.js",
-    "main.js.map": "/vk-freshcode/static/js/main.240a6547.chunk.js.map",
-    "runtime-main.js": "/vk-freshcode/static/js/runtime-main.67a10482.js",
-    "runtime-main.js.map": "/vk-freshcode/static/js/runtime-main.67a10482.js.map",
-    "static/css/2.551d3f2e.chunk.css": "/vk-freshcode/static/css/2.551d3f2e.chunk.css",
-    "static/js/2.ac4bf149.chunk.js": "/vk-freshcode/static/js/2.ac4bf149.chunk.js",
-    "static/js/2.ac4bf149.chunk.js.map": "/vk-freshcode/static/js/2.ac4bf149.chunk.js.map",
-    "index.html": "/vk-freshcode/index.html",
-    "precache-manifest.d69bff0866b162ff0ab1ebadb128d883.js": "/vk-freshcode/precache-manifest.d69bff0866b162ff0ab1ebadb128d883.js",
-    "service-worker.js": "/vk-freshcode/service-worker.js",
-    "static/css/2.551d3f2e.chunk.css.map": "/vk-freshcode/static/css/2.551d3f2e.chunk.css.map",
-    "static/css/main.7883ad8d.chunk.css.map": "/vk-freshcode/static/css/main.7883ad8d.chunk.css.map",
-    "static/js/2.ac4bf149.chunk.js.LICENSE.txt": "/vk-freshcode/static/js/2.ac4bf149.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/vk-freshcode/static/media/TTCommons-DemiBold.35313ea7.ttf"
+    "main.css": "/anki-front/static/css/main.6c72bc3f.chunk.css",
+    "main.js": "/anki-front/static/js/main.240a6547.chunk.js",
+    "main.js.map": "/anki-front/static/js/main.240a6547.chunk.js.map",
+    "runtime-main.js": "/anki-front/static/js/runtime-main.7ca0621f.js",
+    "runtime-main.js.map": "/anki-front/static/js/runtime-main.7ca0621f.js.map",
+    "static/css/2.551d3f2e.chunk.css": "/anki-front/static/css/2.551d3f2e.chunk.css",
+    "static/js/2.2267b390.chunk.js": "/anki-front/static/js/2.2267b390.chunk.js",
+    "static/js/2.2267b390.chunk.js.map": "/anki-front/static/js/2.2267b390.chunk.js.map",
+    "index.html": "/anki-front/index.html",
+    "precache-manifest.252f7ffc08fda5079400cf96165bb14f.js": "/anki-front/precache-manifest.252f7ffc08fda5079400cf96165bb14f.js",
+    "service-worker.js": "/anki-front/service-worker.js",
+    "static/css/2.551d3f2e.chunk.css.map": "/anki-front/static/css/2.551d3f2e.chunk.css.map",
+    "static/css/main.6c72bc3f.chunk.css.map": "/anki-front/static/css/main.6c72bc3f.chunk.css.map",
+    "static/js/2.2267b390.chunk.js.LICENSE.txt": "/anki-front/static/js/2.2267b390.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/anki-front/static/media/TTCommons-DemiBold.35313ea7.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.67a10482.js",
+    "static/js/runtime-main.7ca0621f.js",
     "static/css/2.551d3f2e.chunk.css",
-    "static/js/2.ac4bf149.chunk.js",
-    "static/css/main.7883ad8d.chunk.css",
+    "static/js/2.2267b390.chunk.js",
+    "static/css/main.6c72bc3f.chunk.css",
     "static/js/main.240a6547.chunk.js"
   ]
 }
