@@ -2,12 +2,7 @@ import * as types from './actions';
 
 const initialState = {
     decks: [],
-
-    newDeck: {
-        title: 'хуй',
-        isFavorite: false,
-        cards: []
-    }
+    newDeck: {}
 };
 
 const decks = (state = initialState, action) => {

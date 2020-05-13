@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import {useDispatch} from 'react-redux';
-import { addCard} from '../../store/decks/actionsCreators';
 import { nanoid } from 'nanoid';
 import {Button, Checkbox, FormLayout, FormLayoutGroup, Input} from '@vkontakte/vkui';
 

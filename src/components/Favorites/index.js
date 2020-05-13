@@ -1,7 +1,6 @@
 import React from 'react';
 import {CardScroll} from '@vkontakte/vkui';
 import Deck from '../Deck';
-import { store } from '@mini-core/core'
 
 import './index.scss'
 import {useSelector} from "react-redux";
@@ -14,7 +13,7 @@ const Favorites = () => {
             <CardScroll>
                 {decks.length !== 0 ?
                     decks.filter(deck => deck.isFavorite)
-                        .map(deck => <Deck {...deck}/>) :
+                        .map(deck => <Deck key={deck.id} {...deck}/>) :
                     null
                 }
             </CardScroll>

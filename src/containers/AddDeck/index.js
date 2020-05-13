@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addDeck } from '../../store/decks/actionsCreators';
+import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import {
     Panel,
@@ -25,9 +26,11 @@ const AddDeck = ({id, router}) => {
     const dispatch = useDispatch();
     const [newDeck, setNewDeck] = useState(
         {
+            id: nanoid(),
             title: '',
             isFavorite: false,
             cards: [],
+            progress: 0
         }
     );
     const [showPopup, setShowPopup] = useState(false);
@@ -39,23 +42,15 @@ const AddDeck = ({id, router}) => {
         }));
     };
 
-    const clearState = () => {
-        setNewDeck(() => ({
-            title: '',
-            isFavorite: false,
-            cards: []
-        }))
-    };
-
     const onAddDeckClickHandler = () => {
         dispatch(addDeck(newDeck));
-        clearState();
         router.openPanel('home');
     };
 
     const validateAddButton = () => {
         return newDeck.title.trim().length === 0 || newDeck.cards.length === 0;
     };
+
 
 
     return (
